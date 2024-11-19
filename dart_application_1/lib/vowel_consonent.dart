@@ -1,22 +1,16 @@
-import 'dart:io';
+void main(){
 
-void main() {
-  print("Enter a character: ");
-  String? char = stdin.readLineSync();
-
-  if (char != null && char.length == 1) {
-    if (isVowel(char)) {
-      print("$char is a vowel.");
-    } else {
-      print("$char is a consonant.");
-    }
-  } else {
-    print("Please enter a single character.");
-  }
+  print(checkVowel('a'));
+  print(checkVowel("f"));
+  
+  
 }
 
-bool isVowel(String char) {
-  // Check if the character is a vowel
-  String vowels = "aeiouAEIOU";
-  return vowels.contains(char);
+String checkVowel(String character) {
+  character = character.toLowerCase();
+  if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u') {
+    return "vowel";
+  } else {
+    return "Consonant";
+  }
 }
