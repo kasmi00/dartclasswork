@@ -7,5 +7,5 @@ String printName100Times(String name) {
 }
 
 void main() {
-  print(printName100Times("Adarsh Bajracharya"));
+  print(printName100Times("Kasmi Thapa"));
 }
